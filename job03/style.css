@@ -1,0 +1,30 @@
+body{
+    background-color: #ffffff;
+}
+.cube{
+    display: flex;
+    justify-content: center;
+}
+section{
+   width: 250px;
+   height: 100px;
+    background-color: #88c1d0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+}
+@media screen and (max-width: 768px) {
+    .cube{
+        flex-direction: column;
+    }
+    
+}
+    
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+    .cube{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+    
