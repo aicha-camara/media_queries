@@ -1,0 +1,209 @@
+body{
+    background-color: #ffffff;
+}
+.cube{
+    display: flex;
+    justify-content: center;
+}
+section{
+   width: 250px;
+   height: 100px;
+    background-color: #88c1d0;
+    padding: 20px;
+    margin: 10px;
+    border: 1px solid #000;
+}
+@media screen and (max-width: 768px) {
+    .cube{
+        flex-direction: column;
+    }
+    
+}
+    
+@media screen and (min-width: 768px) and (max-width: 1599px) {
+    .cube{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+}
+    
+.site {
+    font-size: 1.05rem;
+    position: relative;
+    word-wrap: break-word;
+    position: relative;
+    margin: 0 auto;
+    padding: 0 1.618rem;
+  }
+  
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row wrap;
+    align-items: center;
+    position: relative;
+    margin: 0 auto 2.427rem;
+  }
+  
+ 
+  .main-navigation {
+    display: none;
+    flex: 1 0 100%;
+  }
+  
+  .main-navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+  }
+  
+  .main-navigation .menu {
+    position: relative;
+    border: 0.0625rem solid #dcdcdc;
+    width: 100%;
+  }
+  
+
+  .main-navigation .menu .menu-item {
+    position: relative;
+  }
+  
+  .main-navigation .menu .menu-item a {
+    background: #efefef;
+    border: 0.0625rem solid #dcdcdc;
+    color: #1450aa;
+    display: block;
+    padding: 0.809rem 1.618rem;
+    text-decoration: none;
+  }
+  
+
+ 
+  /******************
+  Afficher le menu 
+  *******************/
+  .site-header > [type="checkbox"]:checked ~ .main-navigation {
+    display: block;
+  }
+    .main-navigation [type="checkbox"]:checked ~ ul {
+    display: block;
+  }
+  
+  /*****************
+  Hamburger bouton
+  ***************/
+  .top-nav-label {
+    cursor: pointer;
+    display: block;
+    font-size: 0;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+  }
+  
+  .top-nav-label .open-close-menu {
+    display: block;
+    position: absolute;
+    z-index: 99999;
+  }
+  
+  .top-nav-label .open-close-menu::before,
+  .top-nav-label .open-close-menu::after {
+    border-radius: 0.1875rem;
+    content: "";
+    display: block;
+    position: absolute;
+  }
+  
+
+  .site-header > .top-nav-label {
+    position: relative;
+    right: 0;
+    top: 0;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 0.1875rem;
+  }
+  
+  .site-header > .top-nav-label .open-close-menu {
+    background: #1450aa;
+    border-radius: 0.1875rem;
+    height: 0.25rem;
+    left: 0.1875rem;
+    right: 0.1875rem;
+    top: 1.125rem;
+    transition: 0.25s ease-in-out 0s;
+  }
+  /***************
+  design du bouton
+  
+  ***************/
+  .site-header > .top-nav-label .open-close-menu::before,
+  .site-header > .top-nav-label .open-close-menu::after {
+    background-color: #1450aa;
+    height: 0.25rem;
+    left: 0;
+    transition-duration: 0.3s, 0.3s;
+    width: 100%;
+  }
+  
+  .site-header > .top-nav-label .open-close-menu::before {
+    top: -0.6875rem;
+    transform-origin: top;
+  }
+  
+  .site-header > .top-nav-label .open-close-menu::after {
+    bottom: -0.6875rem;
+    transform-origin: bottom;
+  }
+  
+  .site-header
+    > input[type="checkbox"]:checked
+    ~ .top-nav-label:hover
+    .open-close-menu,
+  .site-header
+    > input[type="checkbox"]:checked:focus
+    ~ .top-nav-label
+    .open-close-menu,
+  .site-header
+    > input[type="checkbox"]:checked:hover
+    ~ .top-nav-label
+    .open-close-menu {
+    background: none;
+  }
+  
+  /******************
+   cacher la checkbox
+  ********************/
+  .site-header input[type="checkbox"] {
+    cursor: pointer;
+    display: block;
+    opacity: 0;
+    position: absolute;
+    z-index: 2;
+  }
+  .site-header > input[type="checkbox"] {
+    right: 0.5rem;
+    top: 2.75rem;
+  }
+  
+  
+  @media only screen and (min-width: 767px) {
+
+  
+    .main-navigation {
+      display: block;
+      flex: 1 0 70%;
+      max-width: 70%;
+    }
+  
+    .main-navigation .menu {
+      border: none;
+      display: flex;
+      justify-content: flex-end;
+    }
+  
+    
+  }
